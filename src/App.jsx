@@ -139,6 +139,30 @@ const projects = [
   },
 ]
 
+const experiences = [
+  {
+    company: 'The Agency',
+    role: 'Full Stack Developer',
+    date: 'Nov 2025 – Present',
+    description:
+      'Developed client web applications and contributed to projects supporting marketing and user experience.',
+  },
+  {
+    company: 'IndieCade',
+    role: 'Game Design Intern',
+    date: 'Jun 2026 – Aug 2026',
+    description:
+      'Developed core gameplay systems and audio using Godot and GDScript for the Climate Jam 2026, earning an Honorable Mention.',
+  },
+  {
+    company: 'UF Design-A-Thon',
+    role: 'Internal Outreach',
+    date: 'Oct 2025 – Mar 2026',
+    description:
+      'Promoted a 24-hour UI/UX and product design competition, reaching over 200 students.',
+  },
+]
+
 function App() {
   const [activeTab, setActiveTab] = useState('About');
 
@@ -239,10 +263,14 @@ function App() {
                   projects, and building things on the web.
                 </p>
               </div>
-
-              <button className="learn-more">
-                Learn More ❯
-              </button>
+              <a
+                className="learn-more"
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>View Resume ❯</span>
+              </a>
             </section>
 
             <div className="right-panels">
@@ -266,6 +294,7 @@ function App() {
                   <span>Godot</span>
                   <span>GDScript</span>
                   <span>Adobe Suite</span>
+                  <span>Unity</span>
                 </div>
               </section>
             </div>
@@ -315,33 +344,30 @@ function App() {
         )}
 
         {activeTab === 'Experience' && (
-          <section className="panel wide-panel">
-            <h2>Experience</h2>
+  <section className="panel wide-panel">
+    <h2>Experience</h2>
 
-            <div className="experience-card">
-              <h3>IndieCade — Game Design Intern</h3>
+    {experiences.map((experience, index) => (
+      <div className="experience-card" key={index}>
+        <h3>
+          {experience.company} — {experience.role}
+        </h3>
 
-              <span className="achievement">
-                🏆 Honorable Mention — Climate Jam 2026
-              </span>
+        <span className="experience-date">
+          {experience.date}
+        </span>
 
-              <p>
-                Developed core gameplay and audio using
-                Godot and GDScript.
-              </p>
-            </div>
-
-            <div className="experience-card">
-              <h3>The Agency — Full Stack Developer</h3>
-
-              <p>
-                Helped develop web applications and an AI
-                presentation transformation prototype for
-                Disney Advertising.
-              </p>
-            </div>
-          </section>
+        {experience.achievement && (
+          <span className="achievement">
+            {experience.achievement}
+          </span>
         )}
+
+        <p>{experience.description}</p>
+      </div>
+    ))}
+  </section>
+)}
 
         {activeTab === 'Contact' && (
           <section className="panel wide-panel">

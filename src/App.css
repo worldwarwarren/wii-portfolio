@@ -167,7 +167,7 @@ nav button:hover {
 }
 
 .learn-more {
-  display: block;
+  display: flex;
   margin: 20px 0 0 auto;
   padding: 12px 25px;
   border: 2px solid #a9cbf5;
@@ -176,6 +176,11 @@ nav button:hover {
   color: #347fc4;
   font-size: 16px;
   cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin-left: auto;
+  width: fit-content;
 }
 
 .right-panels {
@@ -495,4 +500,167 @@ button {
   height: 100%;
   object-fit: cover;
   border-radius: 16px;
+}
+
+.experience-date {
+  display: block;
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 24px 20px;
+  }
+
+  header h1 {
+    font-size: 32px;
+  }
+
+  header p {
+    font-size: 15px;
+  }
+
+  .social-links {
+    gap: 10px;
+  }
+
+  .social-links a {
+    width: 44px;
+    height: 44px;
+  }
+
+  nav {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 12px;
+  }
+
+  nav button {
+    min-height: 140px;
+    padding: 15px 10px;
+    border-radius: 30px;
+  }
+
+  nav button strong {
+    font-size: 18px;
+  }
+
+  .channel-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .dashboard {
+    grid-template-columns: 1fr;
+    padding: 10px 14px 25px;
+  }
+
+  .about-content {
+    gap: 18px;
+  }
+
+  .about-picture {
+    min-width: 120px;
+    width: 120px;
+    height: 145px;
+    flex-shrink: 0;
+  }
+
+  .about-content p {
+    font-size: 16px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-links {
+    grid-template-columns: 1fr;
+  }
+  
+  .header-wave {
+  display: none;
+  }
+
+  header {
+  border-bottom: 3px solid #8fb0e8;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .header-info {
+    text-align: center;
+  }
+
+  nav {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  nav button {
+    min-height: 115px;
+    padding: 12px 5px;
+  }
+
+  nav button strong {
+    font-size: 16px;
+  }
+
+  .channel-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .panel {
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .panel h2 {
+    font-size: 23px;
+  }
+
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-picture {
+    width: 150px;
+    height: 175px;
+  }
+
+  .about-content p {
+    text-align: center;
+  }
+
+  .learn-more {
+    margin: 18px auto 0;
+  }
+
+  .project-card {
+    flex-direction: column;
+  }
+
+  .project-thumbnail {
+    width: 100%;
+    min-width: 0;
+    height: 170px;
+    box-sizing: border-box;
+  }
+
+  .contact-link {
+    padding: 18px;
+  }
+
+  .bottom-waves {
+    height: 120px;
+  }
 }
