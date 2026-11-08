@@ -216,8 +216,15 @@ nav button:hover {
 }
 
 .channel-icon {
-  font-size: 55px;
+  width: 55px;
+  height: 55px;
   display: block;
+  margin: 0 auto 8px;
+  fill: none;
+  stroke: #347fc4;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 nav button strong {
@@ -477,4 +484,15 @@ button {
   height: 100%;
   object-fit: cover;
   border-radius: 13px;
+}
+
+.about-picture {
+  overflow: hidden;
+}
+
+.about-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
 }

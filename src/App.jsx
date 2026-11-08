@@ -42,6 +42,42 @@ function GameIcon() {
   )
 }
 
+function AboutIcon() {
+  return (
+    <svg className="channel-icon" viewBox="0 0 24 24">
+      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+      <circle cx="12" cy="7" r="4" />
+    </svg>
+  )
+}
+
+function ProjectsIcon() {
+  return (
+    <svg className="channel-icon" viewBox="0 0 24 24">
+      <path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+    </svg>
+  )
+}
+
+function ExperienceIcon() {
+  return (
+    <svg className="channel-icon" viewBox="0 0 24 24">
+      <rect x="3" y="7" width="18" height="14" rx="2" />
+      <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+      <path d="M3 12h18M10 12v2h4v-2" />
+    </svg>
+  )
+}
+
+function ContactIcon() {
+  return (
+    <svg className="channel-icon" viewBox="0 0 24 24">
+      <rect x="2" y="4" width="20" height="16" rx="2" />
+      <path d="m22 7-10 7L2 7" />
+    </svg>
+  )
+}
+
 const projects = [
   {
     title: 'Escape Phoebus',
@@ -157,7 +193,7 @@ function App() {
           className={activeTab === 'About' ? 'active' : ''}
           onClick={() => setActiveTab('About')}
         >
-          <span className="channel-icon">👤</span>
+          <AboutIcon />
           <strong>About Me</strong>
         </button>
 
@@ -165,7 +201,7 @@ function App() {
           className={activeTab === 'Projects' ? 'active' : ''}
           onClick={() => setActiveTab('Projects')}
         >
-          <span className="channel-icon">📁</span>
+          <ProjectsIcon />
           <strong>Projects</strong>
         </button>
 
@@ -173,7 +209,7 @@ function App() {
           className={activeTab === 'Experience' ? 'active' : ''}
           onClick={() => setActiveTab('Experience')}
         >
-          <span className="channel-icon">💼</span>
+          <ExperienceIcon />
           <strong>Experience</strong>
         </button>
 
@@ -181,7 +217,7 @@ function App() {
           className={activeTab === 'Contact' ? 'active' : ''}
           onClick={() => setActiveTab('Contact')}
         >
-          <span className="channel-icon">✉️</span>
+          <ContactIcon />
           <strong>Contact</strong>
         </button>
       </nav>
@@ -193,7 +229,9 @@ function App() {
               <h2>About Me</h2>
 
               <div className="about-content">
-                <div className="about-picture">🪐</div>
+                <div className="about-picture">
+                  <img src="/images/headshot.jpg" alt="Warren George" />
+                </div>
 
                 <p>
                   Hi! I'm Warren George, a developer and designer
